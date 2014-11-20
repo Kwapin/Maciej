@@ -24,7 +24,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Zadzwon!"
+        android:text="Zadzwon do mnie!"
         android:layout_below="@+id/wpiszNumer"
         android:id="@+id/callButton"
         android:onClick="callClicked"
