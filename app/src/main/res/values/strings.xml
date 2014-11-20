@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Maciej</string>
+    <string name="zaloguj">zaloguj sie na swoje konto</string>
+    <string name="action_settings">Settings</string>
+    <string name="hint_login">login</string>
+    <string name="hint_haslo">haslo</string>
+    <string name="numer">Numer telefonu</string>
+
+</resources>
