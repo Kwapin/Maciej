@@ -12,7 +12,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.student7.maciej.adapter.PersonListAdapter;
+import com.example.student7.maciej.data.Person;
+
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Bean;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ItemClick;
 import org.androidannotations.annotations.ViewById;
@@ -41,12 +45,14 @@ public class MyActivity extends ActionBarActivity {
 
 
     }
+    @Bean
+    PersonListAdapter adapter;
     @AfterViews
     void init() {
-        String[] values = new String[] {"A","B","C","D","E","F","G","H"};
+      /*  String[] values = new String[] {"A","B","C","D","E","F","G","H"};
 
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,values);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,android.R.id.text1,values); */
 
         list.setAdapter(adapter);
     }
@@ -59,8 +65,8 @@ public class MyActivity extends ActionBarActivity {
     }
 
     @ItemClick
-    void listItemClicked(String item) {
-        Toast.makeText(this, item, Toast.LENGTH_SHORT).show();
+    void listItemClicked(Person item) {
+        Toast.makeText(this, item.name, Toast.LENGTH_SHORT).show();
     }
 
     @Override
